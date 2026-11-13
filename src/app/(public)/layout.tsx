@@ -1,0 +1,15 @@
+import { SiteFooter } from "@/components/public/site-footer";
+import { SiteHeader } from "@/components/public/site-header";
+
+// All public pages read live data from Neon.
+export const dynamic = "force-dynamic";
+
+export default function PublicLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <>
+      <SiteHeader />
+      <main className="flex-1">{children}</main>
+      <SiteFooter />
+    </>
+  );
+}
